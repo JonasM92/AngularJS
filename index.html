@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="movieApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+
+    <style type="text/css">
+        input.ng-dirty.ng-invalid {
+            background-color:#ce8483;
+        }
+
+        input.ng-dirty.ng-valid {
+            background-color:#67b168;
+        }
+
+        .movie.selected {
+            background-color:darkgoldenrod;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-header">Movie App</h1>
+        <nav>
+            <ul class="nav nav-tabs">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">My Collection</a></li>
+                <li><a href="#search">Search</a></li>
+            </ul>
+        </nav>
+        <div ng-view>
+
+        </div>
+    </div>
+
+<script type="application/javascript" src="lib/AngularJS.js" ></script>
+<script type="application/javascript" src="lib/angular-route.min.js" ></script>
+<script type="application/javascript" src="app/controllers/controllers.js" ></script>
+<script type="application/javascript" src="app/controllers/searchCtrl.js" ></script>
+<script type="application/javascript" src="app/controllers/collectionCtrl.js" ></script>
+<script type="application/javascript" src="app/app.js" ></script>
+</body>
+</html>
